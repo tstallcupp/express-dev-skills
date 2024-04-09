@@ -9,10 +9,10 @@
     <body>
         <h1>My Skills</h1>
         <ul>
-          <% todos.forEach(function(t) { %>
+          <% skills.forEach(function(s) { %>
             <li>
               <!-- <a href="/todos/:id"></a> -->
-            <a href="/todos/<%= t.id %>"><%= t.todo%></a>
+            <a href="/skills/<%= s.id %>"><%= s.name %></a>
             </li>
           <% }); %>
         </ul>
