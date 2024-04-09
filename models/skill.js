@@ -28,9 +28,15 @@ const devSkills = [
   ];
 
   module.exports = {
-    getAll
+    getAll,
+    getOne,
 
   };
+
+  function getOne(id) {
+    id = parseInt(id);
+    return devSkills.find((skill) => skill.id === id)
+  }
 
   function getAll() {
     return devSkills;

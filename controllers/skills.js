@@ -5,7 +5,7 @@ const Skill = require('../models/skill')
 // EXPORT TO BE REFERENECED
 module.exports = {
     index,
-    // show
+    show
 };
 
 // Create show function to grab one id
@@ -14,6 +14,13 @@ module.exports = {
 //         skill: Skill.get
 //     })
 // }
+
+// Create show() to find single id
+function show(req, res) {
+    res.render('skills/show', {
+        skills: Skill.getOne(req.params.id)
+    })
+};
 
 // Find index
 function index(req, res) {

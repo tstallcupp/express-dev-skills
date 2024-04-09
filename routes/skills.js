@@ -10,4 +10,7 @@ const skillsCtrl = require('../controllers/skills');
 // });
 router.get('/', skillsCtrl.index);
 
+// GET skills/:id (SHOW functionality/action -> display the detail of a single todo)
+// * add to controller
+router.get('/:id', skillsCtrl.show);
 module.exports = router;
