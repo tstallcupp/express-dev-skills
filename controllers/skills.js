@@ -18,7 +18,7 @@ module.exports = {
 // Create show() to find single id
 function show(req, res) {
     res.render('skills/show', {
-        skills: Skill.getOne(req.params.id)
+        skill: Skill.getOne(req.params.id)
     })
 };
 
