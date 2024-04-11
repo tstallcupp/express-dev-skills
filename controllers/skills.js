@@ -8,23 +8,19 @@ module.exports = {
     show
 };
 
-// Create show function to grab one id
-// function show(req, res) {
-//     res.render('skills/show', {
-//         skill: Skill.get
-//     })
-// }
 
 // Create show() to find single id
 function show(req, res) {
     res.render('skills/show', {
-        skill: Skill.getOne(req.params.id)
+        skill: Skill.getOne(req.params.id),
+        title: 'Skill Details'
     })
 };
 
 // Find index
 function index(req, res) {
     res.render('skills/index', {
-        skills: Skill.getAll()
+        skills: Skill.getAll(),
+        title: 'My Dev Skills'
     })
 }

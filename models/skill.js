@@ -1,4 +1,4 @@
-// Creat skills array
+// Create skills array
 const devSkills = [
     { 
       id: 1,
