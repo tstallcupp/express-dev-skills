@@ -3,16 +3,17 @@ const router = express.Router();
 
 const skillsCtrl = require('../controllers/skills');
 
-// ! ALL paths start with "/skills"
-/* GET users listing. */
-// router.get('/', function(req, res, next) {
-//   res.send('respond with a resource');
-// });
-router.get('/', skillsCtrl.index);
 
-// GET skills/:id (SHOW functionality/action -> display the detail of a single todo)
-// * add to controller
+// GET /skills
+router.get('/', skillsCtrl.index);
+// GET /skills/new
+router.get('/new', skillsCtrl.new);
+
+// GET /skills/:id (SHOW functionality/action -> display the detail of a single todo)
 router.get('/:id', skillsCtrl.show);
+
+// POST /skills
+router.post('/', skillsCtrl.create);
 
 
 module.exports = router;

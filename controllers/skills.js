@@ -5,7 +5,19 @@ const Skill = require('../models/skill')
 // EXPORT TO BE REFERENECED
 module.exports = {
     index,
-    show
+    show,
+    new: newSkill,
+    create,
+};
+
+function create(req, res) {
+    Skill.create(req.body);
+    res.redirect('/skills');
+
+};
+
+function newSkill(req, res){
+    res.render('skills/new', { title : 'New Skill'});
 };
 
 

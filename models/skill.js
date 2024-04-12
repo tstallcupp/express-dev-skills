@@ -30,7 +30,18 @@ const devSkills = [
   module.exports = {
     getAll,
     getOne,
+    create,
 
+  };
+
+  function create(skill){
+    const newSkill = {
+      id: devSkills.length + 1,
+      name: skill.name,
+      description: skill.description
+    };
+    devSkills.push(newSkill);
+    return newSkill;
   };
 
   function getOne(id) {
