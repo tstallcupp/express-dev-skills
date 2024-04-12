@@ -32,7 +32,13 @@ const devSkills = [
     getOne,
     create,
     deleteOne,
+    update
+  };
 
+  function update(id, updatedSkill) {
+    id = parseInt(id);
+    const skill = devSkills.find(skill => skill.id === id);
+    Object.assign(skill, updatedSkill);
   };
 
   function deleteOne(id) {
