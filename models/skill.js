@@ -31,7 +31,14 @@ const devSkills = [
     getAll,
     getOne,
     create,
+    deleteOne,
 
+  };
+
+  function deleteOne(id) {
+    id = parseInt(id);
+    const idx = devSkills.findIndex(skill => skill.id === id);
+    devSkills.splice(idx, 1);
   };
 
   function create(skill){
